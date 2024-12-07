@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdr7x8no3kwe8"]
+
+[ext_resource type="Texture2D" uid="uid://b0ge1p5cmesyu" path="res://CP_2D/Pixel Art Top Down - Basic v1.1.2/Texture/TX Plant.png" id="1_hn3yt"]
+[ext_resource type="Shader" path="res://CP_2D/Pixel Art Top Down - Basic v1.1.2/Texture/arboles.gdshader" id="2_g45qf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s3jtn"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("2_g45qf")
+shader_parameter/scale = Vector3(2, 2, 1)
+shader_parameter/wind_strength = 0.1
+shader_parameter/wind_speed = 1.0
+shader_parameter/albedo_texture = ExtResource("1_hn3yt")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3vkia"]
+radius = 0.119247
+height = 1.37134
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+material_override = SubResource("ShaderMaterial_s3jtn")
+texture = ExtResource("1_hn3yt")
+region_enabled = true
+region_rect = Rect2(24, 8, 112, 144)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_3vkia")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckmngbbf2yseg"]
+
+[ext_resource type="Texture2D" uid="uid://bojrgj0cpescy" path="res://CP_2D/Pixel Art Top Down - Basic v1.1.2/Texture/TX Props.png" id="1_prk8w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5nhet"]
+size = Vector3(0.424194, 0.397583, 0.413544)
+
+[node name="cofre" type="StaticBody3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_prk8w")
+region_enabled = true
+region_rect = Rect2(93.178, 25.2252, 37.2798, 37.7703)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000183105, 0.0361938, -0.0208282)
+shape = SubResource("BoxShape3D_5nhet")

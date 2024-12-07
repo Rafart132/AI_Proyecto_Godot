@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfqspp1x74a6x"]
+
+[ext_resource type="Texture2D" uid="uid://b0ge1p5cmesyu" path="res://CP_2D/Pixel Art Top Down - Basic v1.1.2/Texture/TX Plant.png" id="1_af5bw"]
+
+[node name="arbusto" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+modulate = Color(0.537011, 0.537011, 0.537011, 1)
+texture = ExtResource("1_af5bw")
+region_enabled = true
+region_rect = Rect2(209.719, 180.795, 58.6777, 49.5636)
